@@ -1,8 +1,8 @@
 const nameInitialState = {data: {
   one: 'hi'
 }}
-const temp = (state = nameInitialState, action) => {
+export default (state = nameInitialState, action) => {
   return state
 }
 
-export default temp
+//export default temp
