@@ -69,6 +69,7 @@ label #cancel {
 }
 
 label #btn {
+  position: fixed;
   left: 40px;
   top: 25px;
   font-size: 35px;
@@ -78,6 +79,7 @@ label #btn {
 }
 
 label #cancel {
+  position: fixed;
   z-index: 1111;
   left: -195px;
   top: 17px;
@@ -107,12 +109,13 @@ label #cancel {
 }
 
 #main {
+  display: flex;
   /* background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/385441/balance-110850.jpg') no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh; */
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(
     309deg,
     rgba(2, 0, 36, 1) 0%,
@@ -122,3 +125,12 @@ label #cancel {
     rgba(0, 212, 255, 1) 100%
   );
 }
+
+/* ========== pages ========== */
+/* .flex-container {
+  
+}
+
+.flex-container-items{
+  display: flex;
+} */

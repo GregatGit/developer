@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
+import { Link, animateScroll as scroll } from 'react-scroll'
 import './styles.css'
 
 const SidePanel = ({ pages }) => {
@@ -8,10 +9,17 @@ const SidePanel = ({ pages }) => {
   const renderButtons = (btnArr) => {
     return btnArr.map((btn) => (
       <li>
-        <a href="#">
+        <Link
+          activeClass="active"
+          to={btn.name}
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
           <i className={`fas ${btn.icon}`}></i>
           {btn.name}
-        </a>
+        </Link>
       </li>
     ))
   }
@@ -37,7 +45,7 @@ const SidePanel = ({ pages }) => {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    pages: state.pages
+    pages: state.pages,
   }
 }
 
