@@ -1,0 +1,1 @@
+export const ironThroneImg = '../img/iron-throne.jpg'
