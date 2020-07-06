@@ -2,7 +2,7 @@ const nameInitialState = [
   {
     name: 'Welcome',
     icon: 'fa-laugh',
-    id: 'S'
+    
   },
   {
     name: 'Skills',
