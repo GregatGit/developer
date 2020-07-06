@@ -17,6 +17,7 @@ body {
 }
 
 .sidebar {
+  z-index: 2;
   position: fixed;
   left: -250px;
   width: 250px;
@@ -69,6 +70,7 @@ label #cancel {
 }
 
 label #btn {
+  z-index: 1;
   position: fixed;
   left: 40px;
   top: 25px;
@@ -107,13 +109,15 @@ label #cancel {
   margin-left: 250px;
   transition: all 0.5s;
 }
-
 #main {
+  background-image: url('./images/starryNight.gif');
+  /*background image from -   https://www.deviantart.com/artbit/art/Animated-Starfield-Tile-201679214 */
+  background-repeat: repeat; 
+}
+
+
+/* #main {
   display: flex;
-  /* background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/385441/balance-110850.jpg') no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh; */
   background-size: cover;
   height: 100%;
   background: linear-gradient(
@@ -124,13 +128,16 @@ label #cancel {
     rgba(31, 79, 92, 1) 51%,
     rgba(0, 212, 255, 1) 100%
   );
-}
+} */
 
 /* ========== pages ========== */
 /* .flex-container {
   
 }
 
-.flex-container-items{
-  display: flex;
-} */
+/* background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/385441/balance-110850.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh; */
+
+

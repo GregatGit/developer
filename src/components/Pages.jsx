@@ -1,44 +1,32 @@
 import React from 'react'
 import Section from './Section'
+import { connect } from 'react-redux'
 
-const Pages = () => {
+const Pages = ({ pages }) => {
+  const renderPages = (pagesArr) => {
+    return pagesArr.map((page) => (
+      <Section
+        title={page.name}
+        subtitle={dummyText}
+        dark={true}
+        id={page.name}
+      />
+    ))
+  }
   return (
     <div className="flex-container">
-      <Section
-        title="Section 1"
-        subtitle={dummyText}
-        dark={true}
-        id="Welcome"
-      />
-      <Section
-        title="Section 2"
-        subtitle={dummyText}
-        dark={false}
-        id="Skills"
-      />
-      <Section
-        title="Section 3"
-        subtitle={dummyText}
-        dark={true}
-        id="Projects"
-      />
-      <Section
-        title="Section 4"
-        subtitle={dummyText}
-        dark={false}
-        id="About"
-      />
-      <Section
-        title="Section 5"
-        subtitle={dummyText}
-        dark={true}
-        id="Contact"
-      />
+      {renderPages(pages)}
     </div>
   )
 }
 
-export default Pages
+const mapStateToProps = (state, ownProps) => {
+  return {
+    pages: state.pages,
+  }
+}
+
+export default connect(mapStateToProps)(Pages)
 
 const dummyText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id nibh tortor id aliquet. Sed lectus vestibulum mattis ullamcorper velit sed. Nec nam aliquam sem et tortor. Elit eget gravida cum sociis natoque. Ipsum a arcu cursus vitae. Massa sapien faucibus et molestie ac feugiat sed. Turpis egestas maecenas pharetra convallis posuere morbi leo. Duis at consectetur lorem donec massa sapien faucibus et molestie. Purus sit amet luctus venenatis lectus. Pellentesque nec nam aliquam sem et tortor consequat id porta. Sapien et ligula ullamcorper malesuada. Fringilla ut morbi tincidunt augue interdum velit euismod. Vitae turpis massa sed elementum tempus egestas sed. Netus et malesuada fames ac turpis egestas integer eget aliquet. Blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis.
 
@@ -48,7 +36,4 @@ Pellentesque id nibh tortor id aliquet lectus proin. Blandit cursus risus at ult
 
 Odio aenean sed adipiscing diam. Volutpat ac tincidunt vitae semper quis lectus. Tristique magna sit amet purus. Euismod in pellentesque massa placerat duis. Tellus molestie nunc non blandit massa enim nec dui nunc. Faucibus pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Tempus quam pellentesque nec nam aliquam sem et tortor consequat. Ac felis donec et odio pellentesque diam volutpat commodo sed. Orci sagittis eu volutpat odio. Purus faucibus ornare suspendisse sed nisi lacus. Nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Habitant morbi tristique senectus et netus et. Porta non pulvinar neque laoreet suspendisse. Nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi. Tellus integer feugiat scelerisque varius. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada. Pharetra et ultrices neque ornare aenean euismod. Proin sagittis nisl rhoncus mattis rhoncus.
 
-Nisi quis eleifend quam adipiscing vitae. Eget mauris pharetra et ultrices neque ornare aenean euismod elementum. Non arcu risus quis varius quam quisque id diam. Pharetra magna ac placerat vestibulum. Lobortis feugiat vivamus at augue eget arcu dictum varius duis. Sed id semper risus in hendrerit gravida. Ultrices eros in cursus turpis massa. Non tellus orci ac auctor augue mauris augue. Arcu vitae elementum curabitur vitae nunc. Convallis a cras semper auctor neque vitae tempus quam. Varius quam quisque id diam vel.`;
-
-
-
+Nisi quis eleifend quam adipiscing vitae. Eget mauris pharetra et ultrices neque ornare aenean euismod elementum. Non arcu risus quis varius quam quisque id diam. Pharetra magna ac placerat vestibulum. Lobortis feugiat vivamus at augue eget arcu dictum varius duis. Sed id semper risus in hendrerit gravida. Ultrices eros in cursus turpis massa. Non tellus orci ac auctor augue mauris augue. Arcu vitae elementum curabitur vitae nunc. Convallis a cras semper auctor neque vitae tempus quam. Varius quam quisque id diam vel.`
