@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 
-import temp from './reducer_temp'
+import page from './reducer_pageDisplayed'
 import pages from './reducer_pages'
 
 export default combineReducers({
-  temp,
+  page,
   pages
 })

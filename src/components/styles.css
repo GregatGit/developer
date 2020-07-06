@@ -112,9 +112,8 @@ label #cancel {
 #main {
   background-image: url('./images/starryNight.gif');
   /*background image from -   https://www.deviantart.com/artbit/art/Animated-Starfield-Tile-201679214 */
-  background-repeat: repeat; 
+  background-repeat: repeat;
 }
-
 
 /* #main {
   display: flex;
@@ -131,13 +130,32 @@ label #cancel {
 } */
 
 /* ========== pages ========== */
-/* .flex-container {
-  
-}
 
+.welcome {
+  color: rgb(248, 250, 240);
+  text-align: center;
+}
+.welcome h2 {
+  padding: 50px 50px 40px 220px;
+  font-size: 2.5rem;
+}
+.welcome p {
+  padding: 0 50px 0 260px;
+  font-size: 1.2rem;
+}
+.welcomeLogo {
+  padding-top: 30px;
+}
+.welcomeLogo svg {
+  height: 100px;
+  width: 100px;
+  transition: all 0.5s ease;
+}
+.welcomeLogo svg:hover {
+  height: 115px;
+  width: 115px;
+}
 /* background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/385441/balance-110850.jpg') no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh; */
-
-

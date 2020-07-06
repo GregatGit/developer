@@ -1,10 +1,14 @@
 import React from 'react'
-import Pages from './Pages'
+import { connect } from 'react-redux'
 
-const Background = () => {
+import Pages from './Pages'
+import Welcome from './Pages/Welcome'
+
+const Background = ({ page }) => {
   return (
     <div>
       <div id="main">
+        {page === 0 && <Welcome /> }
         <Pages />
       </div>
       
@@ -12,4 +16,10 @@ const Background = () => {
   )
 }
 
-export default Background
+const mapStateToProps = (state, ownProps) => {
+  return {
+    page: state.page
+  }
+}
+
+export default connect(mapStateToProps)(Background)
