@@ -1,27 +1,32 @@
-import React, { Fragment } from 'react'
+import React, { useState, useEffect ,Fragment } from 'react'
 import { Grow } from '@material-ui/core'
 import { ReactComponent as ReactLogo } from '../../img/logo-react.svg'
 import { ReactComponent as ReduxLogo } from '../../img/logo-redux.svg'
 import { ReactComponent as JSLogo } from '../../img/logo-javascript.svg'
 import { ReactComponent as CssLogo } from '../../img/logo-css.svg'
 import { ReactComponent as FirebaseLogo } from '../../img/logo-firebase.svg'
+import { ReactComponent as NodeLogo } from '../../img/logo-node.svg'
 
 const Welcome = () => {
+  const [show, setShow] = useState(false)
+  useEffect(() => {
+    setTimeout(() => setShow(true), 300)
+  }, [])
   const TIME = 1500
   return (
     <div className="welcome">
       <Fragment>
         <Grow
-          in={true}
+          in={show}
           style={{ transformOrigin: '0 0 0' }}
-          {...(true ? { timeout: TIME } : {})}
+          {...(show ? { timeout: TIME } : {})}
         >
           <h2>Welcome</h2>
         </Grow>
         <Grow
-          in={true}
+          in={show}
           style={{ transformOrigin: '0 0 0' }}
-          {...(true ? { timeout: TIME + 1000 } : {})}
+          {...(show ? { timeout: TIME + 1000 } : {})}
         >
           <p>
             I am Greg Duncan, a web developer building apps with modern
@@ -31,9 +36,9 @@ const Welcome = () => {
           </p>
         </Grow>
         <Grow
-          in={true}
+          in={show}
           style={{ transformOrigin: '0 0 0' }}
-          {...(true ? { timeout: TIME + 2500 } : {})}
+          {...(show ? { timeout: TIME + 2500 } : {})}
         >
           <div className="welcomeLogo">
             <span>
@@ -49,7 +54,7 @@ const Welcome = () => {
               <ReduxLogo />
             </span>
             <span>
-              <CssLogo />
+              <NodeLogo />
             </span>
           </div>
         </Grow>

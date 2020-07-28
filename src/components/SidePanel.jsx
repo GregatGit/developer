@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { Link, animateScroll as scroll } from 'react-scroll'
 import { changePage } from '../actions'
 import './styles.css'
 
@@ -9,19 +8,15 @@ const SidePanel = ({ pages, changePage }) => {
 
   const renderButtons = (btnArr) => {
     return btnArr.map((btn, index) => (
-      <li>
-        <Link
-          activeClass="active"
-          to={btn.name}
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
+      <li key={index}>
+        <span
+  
+
           onClick={() => changePage(index)}
         >
           <i className={`fas ${btn.icon}`}></i>
           {btn.name}
-        </Link>
+        </span>
       </li>
     ))
   }
