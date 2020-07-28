@@ -46,10 +46,10 @@ const Skills = () => {
           take advantage of Create-React-App.
         </p>
         <p>
-          I have also built apps with Vue, Vanilla, jQuerry with Bootstrap and
+          I have built apps with Vue, Vanilla, jQuerry with Bootstrap and
           Semantic-Ui.
         </p>
-        <p>I have also coded with C, C#, MongoDB and Knockout.</p>
+        <p>I am a javascript developer but I first coded with with C, C# and python.</p>
         <p>
           I have a Diploma in Networking (completed 2014) that grounded me in
           the network fundamentals and taught me how to configure Cisco routers
