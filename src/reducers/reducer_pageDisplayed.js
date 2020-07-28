@@ -1,6 +1,6 @@
 import { CHANGE_PAGE } from '../actions'
 
-export const pageDisplayed = (state = 2, action) => {
+export const pageDisplayed = (state = 0, action) => {
   switch (action.type) {
     case CHANGE_PAGE:
       return action.payload

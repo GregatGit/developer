@@ -1,9 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles'
-import { Grid } from '@material-ui/core'
 
-import SideBar from './SidePanel'
 import Welcome from './Pages/Welcome'
 import Skills from './Pages/Skills'
 import Projects from './Pages/Projects'

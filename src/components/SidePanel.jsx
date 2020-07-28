@@ -9,11 +9,7 @@ const SidePanel = ({ pages, changePage }) => {
   const renderButtons = (btnArr) => {
     return btnArr.map((btn, index) => (
       <li key={index}>
-        <span
-  
-
-          onClick={() => changePage(index)}
-        >
+        <span onClick={() => changePage(index)}>
           <i className={`fas ${btn.icon}`}></i>
           {btn.name}
         </span>
