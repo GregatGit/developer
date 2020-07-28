@@ -52,7 +52,7 @@ const Skills = () => {
         <p>I am a javascript developer but I first coded with with C, C# and python.</p>
         <p>
           I have a Diploma in Networking (completed 2014) that grounded me in
-          the network fundamentals and taught me how to configure Cisco routers
+          network fundamentals, taught me how to configure Cisco routers
           and manage Windows Server and Active Directory.
         </p>
         <p>
