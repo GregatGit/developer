@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import { MobileStepper, Paper, Typography, Button,  } from '@material-ui/core/'
-import {green, grey } from '@material-ui/core/colors'
+import { grey } from '@material-ui/core/colors'
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
+import ControlPointIcon from '@material-ui/icons/ControlPoint'
 import SwipeableViews from 'react-swipeable-views'
 import { autoPlay } from 'react-swipeable-views-utils'
 import Pause from '@material-ui/icons/Pause'
@@ -37,6 +38,10 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden',
     width: '100%',
   },
+  typography: {
+    color: grey[100],
+    margin: '15px'
+  },
 }))
 
 function SwipeableTextMobileStepper() {
@@ -45,7 +50,7 @@ function SwipeableTextMobileStepper() {
   const [activeStep, setActiveStep] = useState(0)
   const maxSteps = projectData.length
   const [pause, setPause] = useState(true)
-
+  console.table(projectData)
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1)
   }
@@ -69,7 +74,7 @@ function SwipeableTextMobileStepper() {
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
-        interval={2000}
+        interval={3000}
         autoplay={pause}
       >
         {projectData.map((step, index) => (
@@ -114,6 +119,17 @@ function SwipeableTextMobileStepper() {
           </Button>
         }
       />
+      <span>
+      <Button onClick={() => window.open(projectData[activeStep].code, "_blank")} variant="outlined" className={classes.button}>
+        <ControlPointIcon color="primary" />
+        <Typography className={classes.typography}>Open code</Typography>
+      </Button>
+      <Button onClick={() => window.open(projectData[activeStep].url, "_blank")}>
+        <Typography className={classes.typography}>Open project</Typography>
+
+        <ControlPointIcon color="primary" />
+      </Button>
+      </span>
     </div>
   )
 }
