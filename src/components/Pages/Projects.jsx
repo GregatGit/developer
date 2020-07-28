@@ -1,21 +1,11 @@
 import React, { useState } from 'react'
 import ImageSlider from './PageComponets/ImageSlider'
-import { Grow, Button, Typography } from '@material-ui/core'
-import ControlPointIcon from '@material-ui/icons/ControlPoint'
-import { makeStyles } from '@material-ui/core/styles'
-import { grey } from '@material-ui/core/colors'
-
-const useStyles = makeStyles((theme) => ({
-  typography: {
-    color: grey[100],
-  },
-}))
+import { Grow } from '@material-ui/core'
 
 const Projects = () => {
-  const [show, setShow] = useState(true)
+  const [show] = useState(true)
 
   const TIME = 1500
-  const classes = useStyles()
   return (
     <div className="projects">
       <Grow

@@ -3,7 +3,6 @@ import { Grow } from '@material-ui/core'
 import { ReactComponent as ReactLogo } from '../../img/logo-react.svg'
 import { ReactComponent as ReduxLogo } from '../../img/logo-redux.svg'
 import { ReactComponent as JSLogo } from '../../img/logo-javascript.svg'
-import { ReactComponent as CssLogo } from '../../img/logo-css.svg'
 import { ReactComponent as FirebaseLogo } from '../../img/logo-firebase.svg'
 import { ReactComponent as NodeLogo } from '../../img/logo-node.svg'
 

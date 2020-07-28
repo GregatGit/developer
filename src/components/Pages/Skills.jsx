@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Grid, Paper, Grow } from '@material-ui/core/'
+import { Grid, Grow } from '@material-ui/core/'
 import FlashingIcon from './PageComponets/FlashingIcon'
 
 const useStyles = makeStyles((theme) => ({
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 const Skills = () => {
 
   const classes = useStyles()
-  const [show, setShow] = useState(true)
+  const [show] = useState(true)
 
   const TIME = 1400
   

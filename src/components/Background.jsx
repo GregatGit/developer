@@ -1,21 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { makeStyles } from '@material-ui/core/styles'
-
 import Welcome from './Pages/Welcome'
 import Skills from './Pages/Skills'
 import Projects from './Pages/Projects'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-}))
-
 const Background = ({ page }) => {
-  const classes = useStyles()
   return (
     <div id="main">
       {page === 0 && <Welcome />}

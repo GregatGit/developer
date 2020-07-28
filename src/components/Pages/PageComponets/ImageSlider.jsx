@@ -50,7 +50,7 @@ function SwipeableTextMobileStepper() {
   const [activeStep, setActiveStep] = useState(0)
   const maxSteps = projectData.length
   const [pause, setPause] = useState(true)
-  console.table(projectData)
+
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1)
   }

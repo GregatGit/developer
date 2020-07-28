@@ -1,15 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import { Zoom, Fab } from '@material-ui/core'
-
+import { Zoom } from '@material-ui/core'
 import { logoComponents } from '../../../helpers'
 
-const useStyles = makeStyles((theme) => ({
-  fab: {},
-}))
-
 export default function FlashingIcon({ wait = 0 }) {
-  const classes = useStyles()
   const [value, setValue] = useState(wait)
   const noRepeatIndex = useRef(wait)
 

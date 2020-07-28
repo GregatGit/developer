@@ -3,7 +3,6 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { makeStyles } from '@material-ui/core/styles'
 import {
   List,
-  Button,
   ListItem,
   ListItemText,
   ListItemAvatar,
@@ -17,7 +16,6 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
     maxWidth: 360,
     //backgroundColor: theme.palette.background.paper,
     width: '50%',
@@ -29,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Contacts() {
   const classes = useStyles()
-  const [show, setShow] = useState(true)
+  const [show] = useState(true)
   const TIME = 1000
 
   return (
