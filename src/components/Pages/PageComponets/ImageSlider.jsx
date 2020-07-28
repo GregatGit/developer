@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
-import { MobileStepper, Paper, Typography, Button } from '@material-ui/core/'
+import { MobileStepper, Paper, Typography, Button,  } from '@material-ui/core/'
+import {green, grey } from '@material-ui/core/colors'
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
 import SwipeableViews from 'react-swipeable-views'
@@ -24,9 +25,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     height: 50,
     paddingLeft: theme.spacing(4),
-    borderRadius: '4px 4px 0 0'
+    borderRadius: '4px 4px 0 0',
     //backgroundColor: theme.palette.background.default,
-    //backgroundColor: '#0f0',
+    backgroundColor: 'transparent',
+    color: '#fff'
   },
   img: {
     height: 255,
@@ -60,7 +62,7 @@ function SwipeableTextMobileStepper() {
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
         <Typography>{projectData[activeStep].title}</Typography>
-        <Button onClick={()=> setPause(state => !state)}>{pause ? <Pause /> : <PlayArrowIcon />}</Button>
+        <Button onClick={()=> setPause(state => !state)}>{pause ? <Pause style={{ color: grey[100] }} /> : <PlayArrowIcon style={{ color: grey[100] }} />}</Button>
       </Paper>
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
