@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { connect } from 'react-redux'
-import { changePage } from '../actions'
+
+import { pages } from '../data/pages'
 import './styles.css'
 
-const SidePanel = ({ pages, changePage, newPage }) => {
+const SidePanel = ({ newPage }) => {
   const [panel, setPanel] = useState(true)
 
   const renderButtons = (btnArr) => {
@@ -36,10 +36,4 @@ const SidePanel = ({ pages, changePage, newPage }) => {
   )
 }
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    pages: state.pages,
-  }
-}
-
-export default connect(mapStateToProps, { changePage })(SidePanel)
+export default SidePanel
