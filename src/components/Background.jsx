@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect } from 'react-redux'
+
 import Welcome from './Pages/Welcome'
 import Skills from './Pages/Skills'
 import Projects from './Pages/Projects'
@@ -18,10 +18,4 @@ const Background = ({ page }) => {
   )
 }
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    page: state.page,
-  }
-}
-
-export default connect(mapStateToProps)(Background)
+export default Background

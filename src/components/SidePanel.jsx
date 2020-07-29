@@ -3,13 +3,13 @@ import { connect } from 'react-redux'
 import { changePage } from '../actions'
 import './styles.css'
 
-const SidePanel = ({ pages, changePage }) => {
+const SidePanel = ({ pages, changePage, newPage }) => {
   const [panel, setPanel] = useState(true)
 
   const renderButtons = (btnArr) => {
     return btnArr.map((btn, index) => (
       <li key={index}>
-        <span onClick={() => changePage(index)}>
+        <span onClick={() => newPage(index)}>
           <i className={`fas ${btn.icon}`}></i>
           {btn.name}
         </span>
