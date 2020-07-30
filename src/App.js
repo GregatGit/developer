@@ -4,12 +4,12 @@ import Background from './components/Background'
 
 function App() {
   const [page, setPage] = useState(0)
-  const newPage = num => {
+  const changePage = num => {
     setPage(num)
   }
   return (
     <div>      
-      <SidePanel newPage={newPage} />
+      <SidePanel changePage={changePage} />
       <Background page={page}/>
     </div>
   )

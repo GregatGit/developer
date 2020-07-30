@@ -3,13 +3,18 @@ import React, { useState } from 'react'
 import { pages } from '../data/pages'
 import './styles.css'
 
-const SidePanel = ({ newPage }) => {
-  const [panel, setPanel] = useState(true)
+const SidePanel = ({ changePage }) => {
+  const [panel, setPanel] = useState(false)
+
+  const handleClick = (index) => {
+    changePage(index)
+    setPanel(false)
+  }
 
   const renderButtons = (btnArr) => {
     return btnArr.map((btn, index) => (
       <li key={index}>
-        <span onClick={() => newPage(index)}>
+        <span onClick={() => handleClick(index)}>
           <i className={`fas ${btn.icon}`}></i>
           {btn.name}
         </span>
