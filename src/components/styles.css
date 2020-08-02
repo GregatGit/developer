@@ -180,10 +180,14 @@ label #cancel {
 }
 .skills svg {
   max-height: 80px;
+  min-height: 80px;
+  position: fixed;
 }
-/* .skills h2 {
-  flex-direction: column;
-} */
+.icon-position {
+  display: flex;
+
+}
+
 
 .logo1 {
   height: 150px;

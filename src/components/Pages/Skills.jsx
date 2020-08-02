@@ -1,5 +1,5 @@
 import React, { useState, Fragment } from 'react'
-import { Grow } from '@material-ui/core/'
+import { Grow, Grid } from '@material-ui/core/'
 import FlashingIcon from './PageComponets/FlashingIcon'
 
 const Skills = () => {
@@ -66,8 +66,10 @@ const Skills = () => {
           Outside the digital world I host Murder Mysteries and Trivia nights
           which has made me a confident public speaker.
         </p>
-      </Grow>      
-        <FlashingIcon wait={0} />     
+      </Grow>
+      <div className="icon-position" container spacing={3}>
+        <FlashingIcon wait={0} />  
+      </div>
     </div>
   )
 }

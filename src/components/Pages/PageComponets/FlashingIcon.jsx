@@ -31,7 +31,7 @@ export default function FlashingIcon({ wait = 0 }) {
 
   const transitionDuration = {
     enter: 400,
-    exit: 10,
+    exit: 300,
   }
 
   const fabs = logoComponents.map((icon) => ({ icon: icon }))
