@@ -16,12 +16,12 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 360,
+    //maxWidth: 360,
     //backgroundColor: theme.palette.background.paper,
-    width: '50%',
-    margin: '0 auto',
-    paddingTop: '10%',
-    color: '#fff',
+    //width: '50%',
+    //margin: '0 auto',
+    // paddingTop: '10%',
+    //color: '#fff',
   },
 }))
 
@@ -31,7 +31,8 @@ export default function Contacts() {
   const TIME = 1000
 
   return (
-    <List className={classes.root}>
+    <div className="contacts-page">
+    <List>
       <Grow
         in={show}
         style={{ transformOrigin: '0 0 0' }}
@@ -116,5 +117,6 @@ export default function Contacts() {
       </ListItem>
       </Grow>
     </List>
+    </div>
   )
 }
