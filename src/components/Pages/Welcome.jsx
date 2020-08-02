@@ -27,15 +27,29 @@ const Welcome = () => {
           style={{ transformOrigin: '0 0 0' }}
           {...(show ? { timeout: TIME + 1000 } : {})}
         >
-          <Fragment>
-            <p>
-              I am Greg Duncan, a web developer building apps with modern
-              technologies. My main focus has been utilising React with Redux.
-              Materail-UI and CSS for styling and Firebase as a back end. I also
-              use Vue and Vanilla.js to build apps.
-            </p>
-            <p>Pressing keys 1 to 5 will change pages or click the top left menu button.</p>
-          </Fragment>
+          <p>
+            I am Greg Duncan, a web developer building apps with modern
+            technologies. My main focus has been utilising React with Redux.
+            Materail-UI and CSS for styling and Firebase as a back end. I also
+            use Vue and Vanilla.js to build apps.
+          </p>
+        </Grow>
+        <Grow
+          in={show}
+          style={{ transformOrigin: '0 0 0' }}
+          {...(show ? { timeout: TIME + 1000 } : {})}
+        >
+          <p>
+            Pressing keys 1 to 5 will change pages or click the top left menu
+            button show the side panel.
+          </p>
+        </Grow>
+        <Grow
+          in={show}
+          style={{ transformOrigin: '0 0 0' }}
+          {...(show ? { timeout: TIME + 1000 } : {})}
+        >
+          <p>Pressing 'M' or 'm' key will toggle the side panel.</p>
         </Grow>
         <Grow
           in={show}

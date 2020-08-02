@@ -1,10 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { pages } from '../data/pages'
 import './styles.css'
 
 const SidePanel = ({ changePage }) => {
   const [panel, setPanel] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown')
+    }
+  }, [])
+
+  const handleKeyDown = e => {
+    if (e.key === 'M' || e.key === 'm'){
+      setPanel(state => !state)
+    }
+  }
 
   const handleClick = (index) => {
     changePage(index)
