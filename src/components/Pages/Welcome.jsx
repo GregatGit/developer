@@ -1,4 +1,4 @@
-import React, { useState, useEffect ,Fragment } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import { Grow } from '@material-ui/core'
 import { ReactComponent as ReactLogo } from '../../img/logo-react.svg'
 import { ReactComponent as ReduxLogo } from '../../img/logo-redux.svg'
@@ -27,12 +27,15 @@ const Welcome = () => {
           style={{ transformOrigin: '0 0 0' }}
           {...(show ? { timeout: TIME + 1000 } : {})}
         >
-          <p>
-            I am Greg Duncan, a web developer building apps with modern
-            technologies. My main focus has been utilising React with Redux. Materail-UI and CSS for styling and
-            Firebase as a back end. I also use Vue and Vanilla.js to build
-            apps.
-          </p>
+          <Fragment>
+            <p>
+              I am Greg Duncan, a web developer building apps with modern
+              technologies. My main focus has been utilising React with Redux.
+              Materail-UI and CSS for styling and Firebase as a back end. I also
+              use Vue and Vanilla.js to build apps.
+            </p>
+            <p>Pressing keys 1 to 5 will change pages or click the top left menu button.</p>
+          </Fragment>
         </Grow>
         <Grow
           in={show}
