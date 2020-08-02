@@ -12,8 +12,8 @@ const Background = ({ page }) => {
       {page === 0 && <Welcome />}
       {page === 1 && <Skills />}
       {page === 2 && <Projects />}
-      {page === 3 && <About />}
-      {page === 4 && <Contact />}
+      {page === 3 && <Contact />}
+      {page === 4 && <About />}
     </div>
   )
 }

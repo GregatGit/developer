@@ -12,11 +12,12 @@ export const pages = [
     icon: 'fa-cogs',
   },
   {
-    name: 'About',
-    icon: 'fa-info-circle',
-  },
-  {
     name: 'Contact',
     icon: 'fa-envelope',
   },
+  {
+    name: 'About',
+    icon: 'fa-info-circle',
+  },
+  
 ]
