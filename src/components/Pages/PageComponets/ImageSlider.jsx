@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import { MobileStepper, Paper, Typography, Button,  } from '@material-ui/core/'
 import { grey } from '@material-ui/core/colors'
@@ -50,6 +50,28 @@ function SwipeableTextMobileStepper() {
   const [activeStep, setActiveStep] = useState(0)
   const maxSteps = projectData.length
   const [pause, setPause] = useState(true)
+  const activeStepRef = useRef(0)
+  activeStepRef.current = activeStep
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [])
+
+  const handleKeyDown = e => {
+    console.log(e.key)
+    if (e.key === 'ArrowRight'){
+      if (activeStepRef.current === maxSteps -1) return
+      handleNext()
+      return 
+    }
+    if (e.key === 'ArrowLeft'){
+      if (activeStepRef.current === 0) return  
+      handleBack()
+    }
+  }
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1)
