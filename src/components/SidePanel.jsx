@@ -9,7 +9,7 @@ const SidePanel = ({ changePage }) => {
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown)
     return () => {
-      window.removeEventListener('keydown')
+      window.removeEventListener('keydown', handleKeyDown)
     }
   }, [])
 
