@@ -29,9 +29,7 @@ const Welcome = () => {
         >
           <p>
             I am Greg Duncan, a web developer building apps with modern
-            technologies. My main focus has been utilising React with Redux.
-            Materail-UI and CSS for styling and Firebase as a back end. I also
-            use Vue and Vanilla.js to build apps.
+            technologies. Please look around and check out my old and new projects.
           </p>
         </Grow>
         <Grow
@@ -39,8 +37,9 @@ const Welcome = () => {
           style={{ transformOrigin: '0 0 0' }}
           {...(show ? { timeout: TIME + 1000 } : {})}
         >
+          
           <p>
-            Pressing keys 1 to 5 will change pages or click the top left menu
+            Click the top left menu
             button show the side panel.
           </p>
         </Grow>
@@ -49,7 +48,17 @@ const Welcome = () => {
           style={{ transformOrigin: '0 0 0' }}
           {...(show ? { timeout: TIME + 1000 } : {})}
         >
-          <p>Pressing 'M' or 'm' key will toggle the side panel.</p>
+        <p>Press 'M' to toggle the side panel.</p>
+        </Grow>
+        <Grow
+          in={show}
+          style={{ transformOrigin: '0 0 0' }}
+          {...(show ? { timeout: TIME + 1000 } : {})}
+        >
+          
+          <p>
+            1 to 5 will change pages.
+          </p>
         </Grow>
         <Grow
           in={show}
