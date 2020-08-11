@@ -144,7 +144,7 @@ function SwipeableTextMobileStepper() {
       <span>
       <Button onClick={() => window.open(projectData[activeStep].code, "_blank")} variant="outlined" className={classes.button}>
         <ControlPointIcon color="primary" />
-        <Typography className={classes.typography}>Open code</Typography>
+        <Typography className={classes.typography}>Show code</Typography>
       </Button>
       <Button onClick={() => window.open(projectData[activeStep].url, "_blank")}>
         <Typography className={classes.typography}>Open project</Typography>
