@@ -32,8 +32,8 @@ const Skills = () => {
         {...(show ? { timeout: TIME + 400 } : {})}
       >
         <p>
-          I have built apps with Vue, Vanilla, jQuerry with Bootstrap and
-          Semantic-Ui.
+          I have built apps with Vue, Vanilla, jQuerry with Semantic-Ui and
+           Bootstrap.
         </p>
       </Grow>
       <Grow
