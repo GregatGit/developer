@@ -31,7 +31,7 @@ const About = () => {
           </p>
         </div>
       </section>
-      <footer className="about-footer">...scroll to bottom to activate menu button...</footer>
+      <footer className="about-footer">...scroll to bottom to activate menu button or press 'm'...</footer>
     </div>
   )
 }
