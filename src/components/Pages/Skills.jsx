@@ -1,6 +1,7 @@
 import React, { useState, Fragment } from 'react'
 import { Grow, Grid } from '@material-ui/core/'
 import FlashingIcon from './PageComponets/FlashingIcon'
+import ChangingIcon from './PageComponets/ChangingIcon'
 
 const Skills = () => {
   const [show] = useState(true)
@@ -67,9 +68,7 @@ const Skills = () => {
           which has made me a confident public speaker.
         </p>
       </Grow>
-      <div className="icon-position" container spacing={3}>
-        <FlashingIcon wait={0} />  
-      </div>
+      <ChangingIcon />
     </div>
   )
 }
