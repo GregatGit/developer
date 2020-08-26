@@ -40,7 +40,7 @@ const Welcome = () => {
           
           <p>
             Click the top left menu
-            button show the side panel.
+            button show the side panel or
           </p>
         </Grow>
         <Grow
@@ -48,7 +48,7 @@ const Welcome = () => {
           style={{ transformOrigin: '0 0 0' }}
           {...(show ? { timeout: TIME + 1000 } : {})}
         >
-        <p>Press 'M' to toggle the side panel.</p>
+        <p>press 'M' to toggle the side panel.</p>
         </Grow>
         <Grow
           in={show}
