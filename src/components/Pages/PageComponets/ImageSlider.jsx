@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 400,
     flexGrow: 1,
- 
   },
   header: {
     display: 'flex',
@@ -37,6 +36,9 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 400,
     overflow: 'hidden',
     width: '100%',
+    '&:hover': {
+      cursor: 'pointer'
+    }
   },
   typography: {
     color: grey[100],
@@ -106,6 +108,7 @@ function SwipeableTextMobileStepper() {
                 className={classes.img}
                 src={step.img}
                 alt={step.title}
+                onClick={() => window.open(projectData[activeStep].url, "_blank")}
               />
             ) : null}
           </div>
