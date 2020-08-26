@@ -29,7 +29,7 @@ const Welcome = () => {
         >
           <p>
             I am Greg Duncan, a web developer building apps with modern
-            technologies. Please look around and check out my old and new projects.
+            technologies. Please look around and check out my projects new and old.
           </p>
         </Grow>
         <Grow
