@@ -138,10 +138,10 @@ label #cancel {
 }
 .welcome h2 {
   padding: 20% 10% 5% 10%;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 .welcome p {
-  padding: 0 50px 0 15%;
+  padding: 0 15% 0 15%;
   font-size: 1.2rem;
 }
 .welcomeLogo {
@@ -175,19 +175,17 @@ label #cancel {
   font-size: 2.5rem;
 }
 .skills p {
-  padding: 0 50px 0 15%;
+  padding: 0 15% 0 15%;
   font-size: 1.2rem;
 }
-.skills svg {
+/* .skills svg {
   max-height: 80px;
   min-height: 80px;
   position: fixed;
 }
 .icon-position {
   display: flex;
-
-}
-
+} */
 
 .logo1 {
   height: 150px;
