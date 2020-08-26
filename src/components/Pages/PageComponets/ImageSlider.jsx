@@ -63,7 +63,7 @@ function SwipeableTextMobileStepper() {
   }, [])
 
   const handleKeyDown = e => {
-    console.log(e.key)
+    
     if (e.key === 'ArrowRight'){
       if (activeStepRef.current === maxSteps -1) return
       handleNext()
