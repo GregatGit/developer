@@ -43,6 +43,20 @@ export function displayLogo(index) {
   return logos[index]
 }
 
+export const svgAndName = [
+  {svg: <ReactLogo />, name: 'react'},
+  {svg: <ReduxLogo />, name: 'redux'},
+  {svg: <JSLogo />, name: 'javascript'},
+  {svg: <CssLogo />, name: 'css3'},
+  {svg: <FirebaseLogo />, name: 'firebase'},
+  {svg: <GitLogo />, name: 'git'},
+  {svg: <HtmlLogo />, name: 'html5'},
+  {svg: <JQueryLogo />, name: 'jQuery'},
+  {svg: <NodeLogo />, name: 'node'},
+  {svg: <VscodeLogo />, name: 'vs code'},
+  {svg: <MaterialuiLogo />, name: 'material-ui'},
+]
+
 export const arrRandNums = [
   8,
   5,
