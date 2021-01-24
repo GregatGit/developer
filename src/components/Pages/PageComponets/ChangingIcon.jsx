@@ -26,12 +26,12 @@ function ZoomngA() {
   const theme = useTheme()
   const [value, setValue] = useState(0)
 
-  let timer
+  const timer = useRef()
   useEffect(() => {
-    timer = setInterval(() => nextValue(), 1500);
+    timer.current = setInterval(() => nextValue(), 1500);
 
     return () => {
-      clearInterval(timer)
+      clearInterval(timer.current)
     }
   }, [])
 

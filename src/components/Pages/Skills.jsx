@@ -1,6 +1,5 @@
-import React, { useState, Fragment } from 'react'
-import { Grow, Grid } from '@material-ui/core/'
-import FlashingIcon from './PageComponets/FlashingIcon'
+import React, { useState } from 'react'
+import { Grow } from '@material-ui/core/'
 import ChangingIcon from './PageComponets/ChangingIcon'
 
 const Skills = () => {
