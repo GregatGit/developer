@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { makeStyles } from '@material-ui/core/styles'
 import {
@@ -16,14 +16,6 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import GitHubIcon from '@material-ui/icons/GitHub'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    //maxWidth: 360,
-    //backgroundColor: theme.palette.background.paper,
-    //width: '50%',
-    //margin: '0 auto',
-    // paddingTop: '10%',
-    //color: '#fff',
-  },
   listItem: {
     '&:hover': {
       cursor: 'pointer',
