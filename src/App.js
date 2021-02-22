@@ -4,6 +4,7 @@ import Background from './components/Background'
 
 function App() {
   const [page, setPage] = useState(0)
+  
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown)
     return () => {
