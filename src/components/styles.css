@@ -132,20 +132,33 @@ label #cancel {
 
 /* ========== pages ========== */
 
+p {
+  line-height: 1.5;
+  font-size: 1.4rem;
+  
+}
+
 .welcome {
   color: rgb(248, 250, 240);
-  text-align: center;
+  
+  /* text-align: center; */
 }
 .welcome h2 {
-  padding: 20% 10% 5% 10%;
+  padding: 10% 0%;
   font-size: 3rem;
+  margin-left: 22%;
+  transition-property: font-size;
+  transition-delay: .5s;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
 }
 .welcome p {
-  padding: 0 15% 0 15%;
-  font-size: 1.2rem;
+  padding: 0 15%;
+  max-width: 44ch;
 }
 .welcomeLogo {
   padding-top: 30px;
+  padding-left: 17%;
 }
 .welcomeLogo svg {
   height: 100px;
@@ -156,7 +169,14 @@ label #cancel {
   height: 115px;
   width: 115px;
 }
-@media screen and (max-width: 450px) {
+
+@media screen and (max-width: 680px){
+  .welcome svg {
+    height: 55px;
+    width: 55px;
+  }
+}
+@media screen and (max-width: 450px) { 
   .welcomeLogo svg {
     height: 80px;
     width: 85px;
@@ -165,18 +185,37 @@ label #cancel {
     padding-top: 22%;
   }
 }
+
+.space-welcome {
+  padding-left: 0;
+  transition-property: padding-left;
+  transition-delay: .5s;
+  transition-duration: .5s;
+}
+
+@media screen and (min-width: 1000px){
+  .space-welcome{
+    padding-left: 20%;
+  }
+  .welcome h2 {
+    font-size: 6rem;
+  }
+}
+
 /* skills */
 .skills {
+  padding-left: 10%;
   color: rgb(248, 250, 240);
-  text-align: center;
+  /* text-align: center; */
 }
 .skills h2 {
   padding: 20% 10% 5% 10%;
-  font-size: 2.5rem;
+  font-size: 3.3rem;
 }
 .skills p {
   padding: 0 15% 0 15%;
-  font-size: 1.2rem;
+  max-width: 55ch;
+  
 }
 /* .skills svg {
   max-height: 80px;
@@ -209,7 +248,7 @@ label #cancel {
 
 .projects h2 {
   padding-top: 10%;
-  font-size: 2.5rem;
+  font-size: 5rem;
 }
 
 .projects-slider {

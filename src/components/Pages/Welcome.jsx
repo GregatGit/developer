@@ -14,76 +14,78 @@ const Welcome = () => {
   const TIME = 1500
   return (
     <div className="welcome">
-      <Fragment>
-        <Grow
-          in={show}
-          style={{ transformOrigin: '0 0 0' }}
-          {...(show ? { timeout: TIME } : {})}
-        >
-          <h2>Welcome</h2>
-        </Grow>
-        <Grow
-          in={show}
-          style={{ transformOrigin: '0 0 0' }}
-          {...(show ? { timeout: TIME + 1000 } : {})}
-        >
-          <p>
-            I am Greg Duncan, a web developer building apps with modern
-            technologies. Please look around and check out my projects new and old.
-          </p>
-        </Grow>
-        <Grow
-          in={show}
-          style={{ transformOrigin: '0 0 0' }}
-          {...(show ? { timeout: TIME + 1000 } : {})}
-        >
-          
-          <p>
-            Click the top left menu
-            button show the side panel or
-          </p>
-        </Grow>
-        <Grow
-          in={show}
-          style={{ transformOrigin: '0 0 0' }}
-          {...(show ? { timeout: TIME + 1000 } : {})}
-        >
-        <p>press 'M' to toggle the side panel.</p>
-        </Grow>
-        <Grow
-          in={show}
-          style={{ transformOrigin: '0 0 0' }}
-          {...(show ? { timeout: TIME + 1000 } : {})}
-        >
-          
-          <p>
-            1 to 5 will change pages.
-          </p>
-        </Grow>
-        <Grow
-          in={show}
-          style={{ transformOrigin: '0 0 0' }}
-          {...(show ? { timeout: TIME + 2500 } : {})}
-        >
-          <div className="welcomeLogo">
-            <span>
-              <JSLogo />
-            </span>
-            <span>
-              <ReactLogo />
-            </span>
-            <span>
-              <FirebaseLogo />
-            </span>
-            <span>
-              <ReduxLogo />
-            </span>
-            <span>
-              <NodeLogo />
-            </span>
-          </div>
-        </Grow>
-      </Fragment>
+      <div className="space-welcome">
+        <Fragment>
+          <Grow
+            in={show}
+            style={{ transformOrigin: '0 0 0' }}
+            {...(show ? { timeout: TIME } : {})}
+          >
+            <h2>Welcome</h2>
+          </Grow>
+          <Grow
+            in={show}
+            style={{ transformOrigin: '0 0 0' }}
+            {...(show ? { timeout: TIME + 1000 } : {})}
+          >
+            <p>
+              I am Greg Duncan, a web developer building apps with modern
+              technologies. Please look around and check out my projects new and old.
+            </p>
+          </Grow>
+          <Grow
+            in={show}
+            style={{ transformOrigin: '0 0 0' }}
+            {...(show ? { timeout: TIME + 1000 } : {})}
+          >
+            
+            <p>
+              Click the top left menu
+              button show the side panel or
+            </p>
+          </Grow>
+          <Grow
+            in={show}
+            style={{ transformOrigin: '0 0 0' }}
+            {...(show ? { timeout: TIME + 1000 } : {})}
+          >
+          <p>press 'M' to toggle the side panel.</p>
+          </Grow>
+          <Grow
+            in={show}
+            style={{ transformOrigin: '0 0 0' }}
+            {...(show ? { timeout: TIME + 1000 } : {})}
+          >
+            
+            <p>
+              1 to 5 will change pages.
+            </p>
+          </Grow>
+          <Grow
+            in={show}
+            style={{ transformOrigin: '0 0 0' }}
+            {...(show ? { timeout: TIME + 2500 } : {})}
+          >
+            <div className="welcomeLogo">
+              <span>
+                <JSLogo />
+              </span>
+              <span>
+                <ReactLogo />
+              </span>
+              <span>
+                <FirebaseLogo />
+              </span>
+              <span>
+                <ReduxLogo />
+              </span>
+              <span>
+                <NodeLogo />
+              </span>
+            </div>
+          </Grow>
+        </Fragment>
+      </div>
     </div>
   )
 }
