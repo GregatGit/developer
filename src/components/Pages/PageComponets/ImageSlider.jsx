@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
-import { MobileStepper, Paper, Typography, Button,  } from '@material-ui/core/'
+import { MobileStepper, Paper, Typography, Button } from '@material-ui/core/'
 import { grey } from '@material-ui/core/colors'
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
@@ -8,7 +8,7 @@ import ControlPointIcon from '@material-ui/icons/ControlPoint'
 import SwipeableViews from 'react-swipeable-views'
 import { autoPlay } from 'react-swipeable-views-utils'
 import Pause from '@material-ui/icons/Pause'
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow'
 
 import { projectData } from '../../../data/data'
 
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '4px 4px 0 0',
     //backgroundColor: theme.palette.background.default,
     backgroundColor: 'transparent',
-    color: '#fff'
+    color: '#fff',
   },
   img: {
     height: 255,
@@ -37,12 +37,12 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden',
     width: '100%',
     '&:hover': {
-      cursor: 'pointer'
-    }
+      cursor: 'pointer',
+    },
   },
   typography: {
     color: grey[100],
-    margin: '15px'
+    margin: '15px',
   },
 }))
 
@@ -62,24 +62,37 @@ function SwipeableTextMobileStepper() {
     }
   }, [])
 
-  const handleKeyDown = e => {
-    
-    if (e.key === 'ArrowRight'){
-      if (activeStepRef.current === maxSteps -1) return
+  const handleKeyDown = (e) => {
+    if (e.key === 'ArrowRight') {
+      if (activeStepRef.current === maxSteps - 1) {
+        setActiveStep(0)
+        return
+      }
       handleNext()
-      return 
+      return
     }
-    if (e.key === 'ArrowLeft'){
-      if (activeStepRef.current === 0) return  
+    if (e.key === 'ArrowLeft') {
+      if (activeStepRef.current === 0) {
+        setActiveStep(maxSteps - 1)
+        return
+      }
       handleBack()
     }
   }
 
   const handleNext = () => {
+    if (activeStepRef.current === maxSteps - 1) {
+      setActiveStep(0)
+      return
+    }
     setActiveStep((prevActiveStep) => prevActiveStep + 1)
   }
 
   const handleBack = () => {
+    if (activeStepRef.current === 0) {
+      setActiveStep(maxSteps - 1)
+      return
+    }
     setActiveStep((prevActiveStep) => prevActiveStep - 1)
   }
 
@@ -91,7 +104,13 @@ function SwipeableTextMobileStepper() {
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
         <Typography>{projectData[activeStep].title}</Typography>
-        <Button onClick={()=> setPause(state => !state)}>{pause ? <Pause style={{ color: grey[100] }} /> : <PlayArrowIcon style={{ color: grey[100] }} />}</Button>
+        <Button onClick={() => setPause((state) => !state)}>
+          {pause ? (
+            <Pause style={{ color: grey[100] }} />
+          ) : (
+            <PlayArrowIcon style={{ color: grey[100] }} />
+          )}
+        </Button>
       </Paper>
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
@@ -108,7 +127,9 @@ function SwipeableTextMobileStepper() {
                 className={classes.img}
                 src={step.img}
                 alt={step.title}
-                onClick={() => window.open(projectData[activeStep].url, "_blank")}
+                onClick={() =>
+                  window.open(projectData[activeStep].url, '_blank')
+                }
               />
             ) : null}
           </div>
@@ -120,40 +141,32 @@ function SwipeableTextMobileStepper() {
         variant="text"
         activeStep={activeStep}
         nextButton={
-          <Button
-            size="small"
-            onClick={handleNext}
-            disabled={activeStep === maxSteps - 1}
-          >
+          <Button size="small" onClick={handleNext}>
             Next
-            {theme.direction === 'rtl' ? (
-              <KeyboardArrowLeft />
-            ) : (
-              <KeyboardArrowRight />
-            )}
+            <KeyboardArrowRight />
           </Button>
         }
         backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === 'rtl' ? (
-              <KeyboardArrowRight />
-            ) : (
-              <KeyboardArrowLeft />
-            )}
-            Back
+          <Button size="small" onClick={handleBack}>
+            <KeyboardArrowLeft />
           </Button>
         }
       />
       <span>
-      <Button onClick={() => window.open(projectData[activeStep].code, "_blank")} variant="outlined" className={classes.button}>
-        <ControlPointIcon color="primary" />
-        <Typography className={classes.typography}>Show code</Typography>
-      </Button>
-      <Button onClick={() => window.open(projectData[activeStep].url, "_blank")}>
-        <Typography className={classes.typography}>Open project</Typography>
-
-        <ControlPointIcon color="primary" />
-      </Button>
+        <Button
+          onClick={() => window.open(projectData[activeStep].code, '_blank')}
+          variant="outlined"
+          className={classes.button}
+        >
+          <ControlPointIcon color="primary" />
+          <Typography className={classes.typography}>Show code</Typography>
+        </Button>
+        <Button
+          onClick={() => window.open(projectData[activeStep].url, '_blank')}
+        >
+          <Typography className={classes.typography}>Open project</Typography>
+          <ControlPointIcon color="primary" />
+        </Button>
       </span>
     </div>
   )
